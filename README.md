@@ -2,16 +2,23 @@
 
 FastAPI REST API + booking core (`roomloop/`). Interactive docs (Swagger UI) at `/docs` — no separate frontend needed.
 
-## Run
+## Run (Python 3.9+)
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 python seed.py
 python -m uvicorn app:app --port 8000
-python -m pytest test_roomloop.py -v
 ```
 
 Then open http://127.0.0.1:8000/docs to demo and test every endpoint.
+
+Run the tests in a second terminal:
+
+```bash
+python -m pytest test_roomloop.py -v
+```
+
+Re-run `python seed.py` any time to reset `roomloop.db` to the checked-in demo data.
 
 ## Why REST (not CLI)
 
