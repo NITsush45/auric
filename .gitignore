@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+roomloop.db
+decode_pdf.py
+read_pdf.py
