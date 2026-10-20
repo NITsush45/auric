@@ -1,7 +1,5 @@
 # DECISIONS.md
 
-> Brief: 5–10 short bullets covering: (a) decisions you made where this brief did not tell you what to do, and why; (b) questions you would ask the PM before this ships; (c) where AI helped, and anything it got wrong that you corrected; (d) anything you deliberately left out, and what you would do next.
-
 1. **(a) REST over CLI** — reporting parser + `GET /rooms` dashboard already assume HTTP; CLI would break integrations, so REST preserves them.
 2. **(a) R1 vs R2 resolved by count** — brief demands both all-or-nothing and skip-1-or-2: 1–2 clashes → skip those, rest 201; ≥3 clashes → 409 with nothing saved.
 3. **(a) Dual timestamps** — `start_local` naive ISO is stored/returned (C1 compat); hidden `start_utc` drives conflict math and is never exposed.
